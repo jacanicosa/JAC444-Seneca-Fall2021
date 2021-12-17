@@ -1,0 +1,101 @@
+package livelab;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Connection conn = DriverManager.getConnection(
+					"jdbc:sqlite:C:\\Users\\Albert\\eclipse-workspace\\Lab11\\sample.db");
+			java.sql.Statement st = conn.createStatement();
+
+//			create data base
+			st.execute(
+					"create table AGSStudent (username varchar(50) not null, password varchar(50) not null, fullname varchar(200) not null, instructorEmail varchar(100) not null, constraint pkAGSStudent primary key(username))");
+			st.execute(
+					"create table ExerciseAssigned (instructorEmail varchar(100), exerciseName varchar(100), maxScore double default 10,  constraint pkCustomExercise primary key(instructorEmail, exerciseName))");
+			st.execute(
+					"create table AGSLog (username varchar(50),exerciseName varchar(100),score double default null,submitted bit default 0, constraint pkLog primary key(username,exerciseName))");
+
+//			insert data to my data base
+			// AGSStudent data
+			st.execute("Insert into AGSStudent (username, password, fullname, instructorEmail)"
+					+ "Values('abc', 'p1','Kyle Wright','a@senecacollege.ca')");
+			st.execute("Insert into AGSStudent (username, password, fullname, instructorEmail)"
+					+ "Values('cde', 'p2','Yao Mi','c@senecacollege.ca')");
+			st.execute("Insert into AGSStudent (username, password, fullname, instructorEmail)"
+					+ "Values('wbc', 'p3','Jack Jill','a@senecacollege.ca')");
+
+			// ExerciseAssigned
+			st.execute("Insert into ExerciseAssigned (instructorEmail, exerciseName, maxScore)"
+					+ "Values('a@senecacollege.caa@senecacollege.ca','e1',10)");
+			st.execute("Insert into ExerciseAssigned (instructorEmail, exerciseName, maxScore)"
+					+ "Values('a@senecacollege.ca','e2',10)");
+			st.execute("Insert into ExerciseAssigned (instructorEmail, exerciseName, maxScore)"
+					+ "Values('c@senecacollege.ca','e1',4)");
+			st.execute("Insert into ExerciseAssigned (instructorEmail, exerciseName, maxScore)"
+					+ "Values('c@senecacollege.ca','e4',20)");
+
+			// AGSLog
+			st.execute("Insert into AGSLog (username, exerciseName, score, Submitted)" + "Values('abc', 'e1',9,1)");
+			st.execute("Insert into AGSLog (username, exerciseName, score, Submitted)" + "Values('wbc', 'e2',7,1)");
+
+			// add data
+			Scanner scan = new Scanner(System.in);
+			String name, password, fullname, email;
+			boolean flag = false;
+			while (!flag) {
+				System.out.println("Enter the name ");
+				name = scan.nextLine();
+				System.out.println("Enter the password ");
+				password = scan.nextLine();
+				System.out.println("Enter the fullname ");
+				fullname = scan.nextLine();
+				System.out.println("Enter the email ");
+				email = scan.nextLine();
+				st.execute("Insert into AGSStudent (username, password, fullname, instructorEmail)" + "Values('" + name
+						+ "', '" + password + "','" + fullname + "','" + email + "')");
+
+				String instructorEmail, exercise;
+				double maxscore;
+				System.out.println("Assign exerise to this student");
+				System.out.println("Enter the instructor email ");
+				instructorEmail = scan.nextLine();
+				System.out.println("Enter the exercise ");
+				exercise = scan.nextLine();
+				System.out.println("Enter the max sore");
+				maxscore = scan.nextDouble();
+				st.execute("Insert into ExerciseAssigned (instructorEmail, exerciseName, maxScore)" + "Values('"
+						+ instructorEmail + "','" + exercise + "'," + maxscore + ")");
+
+				System.out.println("you are all set!");
+				System.out.println("Do you want to continue? y/n");
+				char choice = scan.next().charAt(0);
+				if (choice == 'n') {
+					flag = true;
+				} else {
+					flag = false;
+				}
+			}
+
+			// view, join
+			st.execute("CREATE VIEW AGSLog_after_run AS\r\n"
+					+ "SELECT AGSStudent.username, ExerciseAssigned.exerciseName, AGSLog.score, AGSLog.submitted\r\n"
+					+ "FROM ExerciseAssigned\r\n"
+					+ "LEFT JOIN AGSStudent ON ExerciseAssigned.instructorEmail=AGSStudent.instructorEmail\r\n"
+					+ "LEFT JOIN AGSLog ON AGSStudent.username=AGSLog.username\r\n" + "ORDER BY AGSLog.score DESC;");
+			
+			scan.close();
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

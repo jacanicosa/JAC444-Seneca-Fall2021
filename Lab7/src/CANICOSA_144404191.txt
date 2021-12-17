@@ -1,0 +1,19 @@
+/**********************************************
+Workshop 7
+Course:JAC444 - Fall 2021
+Last Name:Canicosa
+First Name:Albert Joshua
+ID:144404191
+Section:NFF
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:15 November 2021
+**********************************************/
+
+For this workshop we made two apps, one is sort of the same with last week's lab workshops where we had to make an application
+but in this week's workshop we made an app that uses text files as a source, which is a bit challenging but after watching the lectures
+and watching online videos that may help me to finish the workshop, I was able to do it. 
+
+The second task is much easier for me because we did not need to use JavaFX. We made a lambda expression, we were tasked to make a program
+that lists an array of numbers and then the program asks us to name one of the numbers in the list and it will say how many times
+the number the user picked appeared in the array. It was challenging but after reviewing I was able to finish it.

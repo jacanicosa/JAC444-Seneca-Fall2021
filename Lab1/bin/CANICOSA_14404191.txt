@@ -1,0 +1,22 @@
+/**********************************************
+Workshop 1
+Course:JAC444 - Fall 2021
+Last Name:Canicosa
+First Name:Albert Joshua
+ID:144404191
+Section:NFF
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:26 September 2021
+**********************************************/
+
+In this workshop I learned how to use basic java coding techniques, how to create classes, methods and the use of arrays. 
+In the 1st task where we need to create an encryption device, I had a hard time on how I was going to do it but after reviewing the lectures,
+I was able to complete it.
+In the craps task I used random class to produce random numbers for the game, and I also used the same for the chatter box, 
+using random numbers to select which of the messages will appear during the game randomly. I also used a switch to determine the outcome
+of the game, giving a result for each case whether the player has won, lost, or should drew in which case he will continue playing until he
+wins or loses. 
+I had a hard time with the wagering part and the random chatter part  of the task but after 
+asking for help to better understand how to accomplish the task and after doing my own research on what I can do to accomplish it,
+ I was able to do it and it was very fulfilling after finishing it.

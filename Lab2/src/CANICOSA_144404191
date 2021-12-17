@@ -1,0 +1,26 @@
+/**********************************************
+Workshop 2
+Course:JAC444 - Fall 2021
+Last Name:Canicosa
+First Name:Albert Joshua
+ID:144404191
+Section:NFF
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:03 October 2021
+**********************************************/
+
+For this workshop we learned how to make two-dimensional arrays. 
+In the first workshop we made use of two-dimensional arrays to record the total sales of persons and the products that they are selling. What I did with my code is I made a for loop and made use of the random class to make 
+random numbers to be used in the program 
+(though I think that I would have been better if we put in our own input, but if we did that it would take longer to fill the 2d array so random numbers also work.)
+
+FOr the second task we were asked to compute for the taxable income of a 
+person depending on their status (single, married, widowed, etc.) 
+What I did with this task is I would prompt the used to enter their status, 
+then their income, after that It would show the user their tax. 
+I used the 2009 table for basis of the tax.
+
+I found this workshop much more challenging than the first 
+one but I believe that this is useful because it also helps me to learn 
+more about the course.

@@ -1,0 +1,5 @@
+package udpserverclient;
+
+public class UdpServer {
+
+}

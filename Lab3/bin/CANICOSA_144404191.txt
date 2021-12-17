@@ -1,0 +1,16 @@
+/**********************************************
+Workshop 3
+Course:JAC444 - Fall 2021
+Last Name:Canicosa
+First Name:Albert Joshua
+ID:144404191
+Section:NFF
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:09 October 2021
+**********************************************/
+
+This workshop helped me understand more about the use of strings and how overloaded constructors can be used in different tasks. In the integer task it showed that we can use strings to
+compute though the norm is to use integers, and it also helped me understand how to make programmes that can compute for the value of each integers i put in it. In the second task,
+I learned how to use overloaded functions and how I can use these functions to show the output that I want to show. I found this workshop easier than the first two but it is still challenging
+and I learned a lot from it.

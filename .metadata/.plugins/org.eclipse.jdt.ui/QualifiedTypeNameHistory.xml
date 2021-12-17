@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="craps.Crapsv1"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="filematching.AccountRecord"/>
+    <fullyQualifiedTypeName name="filematching.TransactionRecord"/>
+    <fullyQualifiedTypeName name="filematching2.CreateData"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
+    <fullyQualifiedTypeName name="javafx.event.EventHandler"/>
+</qualifiedTypeNameHistroy>

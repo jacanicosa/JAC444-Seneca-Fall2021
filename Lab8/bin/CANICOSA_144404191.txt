@@ -1,0 +1,19 @@
+/**********************************************
+Workshop 8
+Course:JAC444 - Fall 2021
+Last Name:Canicosa
+First Name:Albert Joshua
+ID:144404191
+Section:NFF
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:24 November 2021
+**********************************************/
+
+In this workshop we were tasked to create three programs and one of the 3 should include JAVAFX. the
+first task was fairly easy because we only needed to create a program that inserts random numbers and from
+there get its sum and average. The second task was harder than the first one because we have to implement Sets 
+to the solution and we have to make sure that we only show the factors so I had trouble with that but after figuring
+out how to do it, i thought that it was easier than I first thought it would be.
+The last task was the longest one because we had to make a list of countries and their capitals, and this is also 
+the program that I chose to implement JAVAFX to.
